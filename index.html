@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人信息</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        
+        body {
+            font: 14px/1.5 tahoma, arial, 'Hiragino Sans GB', '\5FAE\8F6F\96C5\9ED1', sans-serif;
+        }
+        
+        .main {
+            position: fixed;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin-top: 50px;
+            width: 300px;
+        }
+        
+        .main .content {
+            padding: 20px;
+            width: 85%;
+            height: 180px;
+            background-color: #fff;
+        }
+        
+        .main .content div {
+            padding-bottom: 10px;
+        }
+        
+        .main .system div {
+            padding-bottom: 5px;
+            padding-left: 20px;
+        }
+        
+        .main .submit {
+            display:none;
+            width: 90%;
+            height: 35px;
+            text-align: center;
+            margin: 160px auto;
+            line-height: 35px;
+            letter-spacing: 8px;
+            border-radius: 5px;
+            background: #fd944d;
+            border: 1px solid #eee;
+            color: #fff;
+        }
+        
+        .main .submit:hover {
+            background: #f97c4b;
+            cursor: pointer;
+        }
+
+        .main .error {
+            position: absolute;
+            width:270px;
+            height: 30px;
+            text-align: center;
+            line-height: 40px;
+            color: #fff;
+            border-radius: 10px 10px;
+        }
+        @keyframes cancel {
+            0% {
+                background: rgba(255, 0, 0, 0);
+            }
+            50% {
+                background: rgba(255, 0, 0, 1);
+            }
+            100% {
+                background: rgba(255, 0, 0, 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="content">
+            <div data-prop="account" class="info">帐号 :</div>
+            <div data-prop="employeeId" class="info">员工ID :</div>
+            <div data-prop="enterpriseAccount" class="info">企业帐号 :</div>
+            <div data-prop="enterpriseId" class="info">企业ID :</div>
+            <div data-prop="mobile" class="info">手机号码 :</div>
+            <div data-prop="nickName" class="info">昵称 :</div>
+            <div class="error"></div>
+        </div>
+        <div class="system">
+            <div data-self="terminalVersion" class="msg">终端版本 :</div>
+            <div data-self="browerUserAgent" class="msg">浏览器型号 :</div>
+        </div>
+        <div class="submit">上报日志</div>
+    </div>
+    
+    <script src="js/zepto.js"></script>
+    <script src="https://www.fxiaoke.com/open/jsapi/2.1.3/fsapi.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
